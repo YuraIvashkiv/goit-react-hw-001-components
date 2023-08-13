@@ -1,26 +1,17 @@
-export const Statistics = ({title, stats}) => {
-  return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+import { StatList, StatItem, StatisticTitle } from './statistics.styled';
 
-      <ul className="stat-list">
-        <li className="item" key={stats.id}>
-          <span className="label">{title}</span>
-          <span className="percentage">{stats.percentage}</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp3</span>
-          <span className="percentage">14%</span>
-        </li>
-        <li className="item">
-          <span className="label">.pdf</span>
-          <span className="percentage">41%</span>
-        </li>
-        <li className="item">
-          <span className="label">.mp4</span>
-          <span className="percentage">12%</span>
-        </li>
-      </ul>
-    </section>
+export const Statistics = ({ stats, title }) => {
+  return (
+    <>
+      {title && <StatisticTitle>{title}</StatisticTitle>}
+      <StatList>
+        {stats.map(stat => (
+          <StatItem key={stat.id}>
+            <p>{stat.label}</p>
+            <p>{stat.percentage}</p>
+          </StatItem>
+        ))}
+      </StatList>
+    </>
   );
 };

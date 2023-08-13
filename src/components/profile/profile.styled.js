@@ -3,15 +3,15 @@ import styled from 'styled-components';
 export const Img = styled.img`
  border-radius:70%;
  width:100px;
- display:flex; 
+//  display:flex; 
  margin-top: 10px;
 `;
 
 export const GenProfile = styled.div`
 width:300px;
-height:300px;
+// height:300px;
 border: 3px solid blue;
-display:block;
+// display:block;
 margin: 0 auto;
 `;
 
@@ -26,11 +26,9 @@ margin:0 auto;
 `;
 
 export const Stats = styled.ul`
-list-style:none;
      display: flex;
    justify-content:center;
-    padding-left: 0;
-    background-color: sienna;
+       background-color: sienna;
 `;
 
 export const Followers = styled.li`
